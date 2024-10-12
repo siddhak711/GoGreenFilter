@@ -1,0 +1,1129 @@
+/* Reset some default browser settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif; /* Modern, professional font for a sleek, clean look */
+}
+
+/* Navbar design */ 
+.navbar {
+    background: linear-gradient(90deg, #000000, #4CAF50, #8BC34A); /* Gradient with subtle changes for depth */
+    padding: 1px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Add a soft shadow for floating effect */
+    transition: background 0.3s ease-in-out;
+}
+/* Do NOT Touch this*/
+.navbar.scrolled {
+    background-color: #333; /* Slightly darker background when scrolled */
+}
+/* Do NOT Touch this*/
+/* Flexbox container for the logo and navigation links */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1px;
+}
+/* Do NOT Touch this*/
+.logo img {
+    height: 80px; /* Logo size increased for better visibility */
+    transition: transform 0.3s ease; /* Animation for hover */
+}
+/* Do NOT Touch this*/
+.logo img:hover {
+    transform: scale(1.25); /* Logo zoom effect on hover */
+}
+/* Do NOT Touch this*/
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 40px; /* More space between links */
+}
+/* Do NOT Touch this*/
+.nav-links li {
+    position: relative;
+}
+/* Do NOT Touch this*/
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 0.08em; /* Slightly more space between letters for modern look */
+    font-size: 1.2rem; /* Slightly larger font for links */
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+}
+/* Do NOT Touch this*/
+.nav-links a:hover {
+    color: #8BC34A; /* Highlight on hover */
+}
+/* Do NOT Touch this*/
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background-color: #8BC34A; /* Golden underline */
+    transition: width 0.3s ease; /* Smooth underline animation */
+}
+/* Do NOT Touch this*/
+.nav-links a:hover::after {
+    width: 100%; /* Animate underline on hover */
+}
+
+/* Hero Section */
+.hero {
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #8BC34A;
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 25px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #8BC34A;
+}
+
+/* Section Styling */
+.section {
+    padding: 80px 0;
+    text-align: center;
+    background-color: #ffffff;
+    margin-bottom: 30px;
+}
+/* Update the image size for the How It Works section */
+.image-block img {
+    max-width: 100%; /* Ensures the image resizes responsively */
+    height: auto;
+    width: 900px; /* You can adjust this value to control the size of the image */
+    border-radius: 10px; /* Adds rounded corners for a sleeker look */
+    display: block;
+    margin: 0 auto;
+}
+.img {
+    max-width: 100%; /* Scale the image */
+    margin-bottom: 20px; /* Add space below the image */
+ }
+
+p strong {
+    color: #8BC34A; /* Green bold text */
+    font-weight: bold; /* Ensure it's bold */
+ }
+ 
+/* Centering the image */
+.image-block {
+    display: flex;
+    margin: 20px 0;
+}
+
+/* Stats Section */
+.stats {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.stat h3 {
+    font-size: 3rem;
+    color: #8BC34A;
+}
+
+.stat p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+
+
+.problem-section {
+    background-color: #f4f4f4;
+    padding: 60px 0;
+}
+
+.text-block {
+    flex: 1;
+}
+
+.image-block {
+    flex: 1;
+}
+
+.image-block img {
+    width: 60%;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Styling (Advanced) */
+.section {
+    padding: 100px 0;
+    text-align: center;
+    background-color: #ffffff;
+    margin-bottom: 50px;
+    position: relative;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+/* Advanced Fade-in Animation for sections */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hero Section - Add parallax scrolling effect */
+.hero {
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    background-attachment: fixed;
+}
+
+/* Hero Text Effect */
+.hero h1 {
+    font-size: 5rem;
+    margin-bottom: 20px;
+    font-weight: 900;
+    color: #8BC34A;
+    animation: textZoom 1.5s forwards;
+}
+
+/* Zoom effect on hero text */
+@keyframes textZoom {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.hero p {
+    font-size: 1.6rem;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.8;
+    animation: fadeIn 2s ease-in;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 35px;
+    background-color: #8BC34A;
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 30px;
+    text-decoration: none;
+    margin-top: 30px;
+    transition: background-color 0.3s, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #8BC34A;
+    transform: scale(1.1);
+}
+
+/* Full-Width Grid for Numbers Section */
+.numbers-section {
+    background-color: #f4f4f4;
+    padding: 100px 0;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    gap: 40px;
+}
+
+.stat h3 {
+    font-size: 4rem;
+    color: #005f73;
+    margin-bottom: 10px;
+}
+
+.stat p {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+/* Updated Color Scheme */
+/* === Global Styling and Base Colors === */
+/* Apply the overall color scheme and set the base styling */
+body {
+    background-color: #2A2D34; /* Deep charcoal background to make the site feel sleek and modern */
+    color: #FAFAFA; /* Off-white text for contrast against dark background */
+    font-family: 'Montserrat', sans-serif; /* Use a modern, clean font */
+    line-height: 1.6; /* Better readability with well-spaced lines */
+}
+
+/* === Navbar Styling === */
+/* Refine the navbar to match the color scheme */
+.navbar {
+    background-color: #4CAF50; /* Fresh green to highlight eco-friendly focus */
+    padding: 1px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    transition: background-color 0.3s ease-in-out; /* Smooth background transition for scrolling */
+}
+
+.navbar a {
+    color: #FAFAFA; /* Off-white for text contrast */
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* === Hero Section === */
+/* Add a more sophisticated effect to the hero section */
+.hero {
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    height: 90vh; /* Occupy most of the screen for a bold entry */
+    display: flex;
+    align-items: center; /* Align the content vertically */
+    justify-content: left; /* Align text to the left */
+    padding-left: 50px; /* Create space from the left edge */
+    color: #FAFAFA;
+}
+
+/* Hero section text with sophisticated animation */
+.hero h1 {
+    font-size: 5rem;
+    font-weight: 800;
+    color: #8BC34A; /* Use accent green to make the heading pop */
+    animation: zoomIn 1.5s ease forwards; /* Zoom effect for the main title */
+}
+
+/* Keyframe for zoom-in animation */
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.hero p {
+    font-size: 1.6rem;
+    max-width: 600px;
+    animation: fadeIn 2s ease-in forwards; /* Fade-in effect for hero paragraph */
+}
+
+/* === Call to Action Button === */
+.cta-button {
+    background-color: #8BC34A; /* Vibrant green to encourage interaction */
+    color: #2A2D34; /* Contrast text color on button */
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover */
+}
+
+.cta-button:hover {
+    background-color: #4CAF50; /* Darker hover effect */
+    transform: scale(1.1); /* Slight scale effect to make the button feel interactive */
+}
+
+/* === Section Styling === */
+/* Refine sections with left-aligned text for a cleaner layout */
+.section {
+    padding: 100px 50px; /* Add padding to left-align the text */
+    background-color: #2A2D34; /* Deep charcoal background */
+    margin-bottom: 50px;
+    opacity: 0;
+    animation: slideUp 1.5s forwards; /* Slide up animation when section appears */
+}
+
+/* Keyframe for slide-up animation */
+@keyframes slideUp {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Section heading refinement */
+.section h2 {
+    color: #8BC34A; /* Accent green for section headings */
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+/* Text block within sections */
+.text-block {
+    max-width: 800px;
+    text-align: center; /* Left-align the text block */
+}
+
+/* Image block styling to add hover effects */
+.image-block img {
+    border-radius: 15px;
+    width: 60%;
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Smooth image scaling */
+}
+
+.image-block img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4); /* Increase shadow on hover */
+}
+
+/* === Stats Section Styling === */
+/* Full-width grid for stats section */
+.numbers-section {
+    background-color: #4CAF50; /* Fresh green to highlight achievements */
+    padding: 100px 50px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+}
+
+.stat h3 {
+    font-size: 4rem;
+    color: #FAFAFA;
+}
+
+.stat p {
+    font-size: 1.5rem;
+    color: #2A2D34; /* Contrast text for readability */
+}
+
+
+
+/* === Reset and Global Styling === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* === Navbar Styling === */
+.navbar {
+    background-color: #4CAF50; /* Updated fresh green for eco-friendly vibe */
+    padding: 1px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.navbar a {
+    color: #FAFAFA;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Centering and Hover Effects for Navigation */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.nav-links a:hover {
+    color: #8BC34A; /* Accent green on hover */
+}
+
+/* === Hero Section === */
+.hero {
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 5rem;
+    font-weight: 900;
+    color: #8BC34A;
+    animation: zoomIn 1.5s ease forwards; /* Zoom in effect */
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.hero p {
+    font-size: 1.6rem;
+    color: #FAFAFA;
+    animation: fadeIn 2s ease-in forwards;
+}
+
+.cta-button {
+    background-color: #8BC34A;
+    color: #2A2D34;
+    padding: 12px 35px;
+    border-radius: 30px;
+    font-weight: 700;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #4CAF50;
+    transform: scale(1.1);
+}
+
+/* === Sections === */
+.section {
+    padding: 80px 0;
+    background-color: #2A2D34;
+    color: #FAFAFA;
+    animation: slideUp 1.5s forwards;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+.text-block {
+    max-width: 700px;
+}
+
+.image-block img {
+    width: 60%;
+    border-radius: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.image-block img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* === Stats Section === */
+.numbers-section {
+    background-color: #4CAF50;
+    padding: 100px 0;
+}
+
+.stat h3 {
+    font-size: 4rem;
+    color: #FAFAFA;
+}
+
+.stat p {
+    font-size: 1.5rem;
+    color: #2A2D34;
+}
+
+
+ /* Adding text animations */
+
+/* Animation for headers */
+@keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation for paragraphs */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* Apply to paragraphs (p) */
+.section p {
+    font-size: 1.2rem;
+    color: #555;
+    animation: fadeIn 1.8s ease-in forwards;
+}
+
+/* Apply to stats section */
+.stat h3, .stat p {
+    animation: fadeIn 1.5s ease-in forwards;
+}
+
+/* --- General Animations for Text Elements --- */
+
+/* Keyframe for sliding in text from the bottom */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Keyframe for fading in text */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* --- Applying animations to more text elements --- *
+
+/* Animation for section paragraphs */
+.section p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    max-width: 700px;
+    animation: fadeIn 1.8s ease forwards; /* Fade in effect for paragraphs */
+}
+
+/* Add animation for buttons */
+.cta-button {
+    margin-top: 20px;
+    padding: 15px 40px;
+    background-color: #8BC34A;
+    color: #00875A;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    animation: slideUp 1.8s ease forwards; /* Slide up for buttons */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #8BC34A;
+    transform: scale(1.05); /* Scale slightly on hover */
+}
+
+/* Stats section animations */
+.stat h3, .stat p {
+    animation: fadeIn 2s ease forwards; /* Fade in stats numbers */
+}
+
+/* Animating text inside navbar */
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    animation: fadeIn 1.5s ease forwards; /* Fade in navbar links */
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #8BC34A; /* Hover effect on nav links */
+}
+
+/* Add delay to paragraphs for staggered animations */
+.section p:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.section p:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.section p:nth-child(4) {
+    animation-delay: 0.9s;
+}
+
+/* --- General Text Animations (Trigger when in-view class is added) --- */
+
+/* Section titles animation */
+.section h2 {
+    font-size: 4rem;
+    color: #8BC34A;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(50px); /* Start below */
+    transition: transform 1.5s ease, opacity 1.5s ease;
+}
+
+.section.in-view h2 {
+    opacity: 1;
+    transform: translateY(0); /* Slide in on view */
+}
+
+/* Paragraph animation */
+.section p {
+    font-size: 1.2rem;
+    color: #ffffff;
+    opacity: 0;
+    transition: opacity 1.8s ease;
+}
+
+.section.in-view p {
+    opacity: 1; /* Fade in on view */
+}
+
+/* Stats Section Animation */
+.stat h3, .stat p {
+    opacity: 0;
+    transition: opacity 1.5s ease;
+}
+
+.section.in-view .stat h3,
+.section.in-view .stat p {
+    opacity: 1; /* Fade in when stats are visible */
+}
+
+/* --- Button Styling --- */
+.cta-button {
+    margin-top: 30px;
+    padding: 15px 40px;
+    background-color: #8BC34A; /* Original button color */
+    color: #2A2D34;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #4CAF50; /* Slightly darker green on hover */
+    transform: scale(1.05);
+}
+
+/* --- Rounded Divider Styling for Section Separation --- */
+.section-divider {
+    width: 80%;
+    height: 5px; /* Increase the height for more visibility */
+    background-color: #8BC34A; /* Green divider to match theme */
+    margin: 50px auto;
+    border-radius: 100px; /* Fully rounded ends */
+    opacity: 0.7;
+}
+
+/* General section styling */
+.who-we-serve {
+    padding: 60px;
+    text-align: center;
+    background-color: #2A2D34; /* Dark gray background matching your theme */
+    color: #FFFFFF; /* White text for better contrast */
+}
+
+.who-we-serve h2 {
+    font-size: 4rem;
+    margin: 40px;
+    color: #8BC34A; /* Bright green color for headers, consistent with your logo */
+}
+
+/* Container for the service cards */
+.service-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+    flex-wrap: wrap; /* Responsive design for smaller screens */
+}
+
+/* Individual service card styling */
+.card {
+    background-color: #2A2D34; /* Darker gray for the card background */
+    padding: 15px;
+    margin-top: 45px;
+    border-radius: 10px;
+    width: 500px;
+    border: 1px solid white; /* Adding the white border */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left; /* Align text left */
+}
+
+.card:hover {
+    transform: scale(1.15); /* Slightly enlarges the card on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon styling inside the card */
+.card .icon img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+/* Card title styling */
+.card h3 {
+    font-size: 2.75rem;
+    color: #8BC34A; /* Bright green for card titles */
+    margin-bottom: 15px;
+}
+
+/* Card description styling */
+.card p {
+    font-size: 1.25rem;
+    color: #ffffff; /* Light gray text for readability */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .service-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%; /* Cards take up most of the screen on mobile */
+    }
+}
+/* Keyframe for sliding up when scrolling into view */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.emphasis p {
+    font-size: 2rem;
+}
+
+/* Impact Section Styling */
+.impact-section {
+    background-color: #2A2D34;
+    padding: 100px 0;
+    text-align: center;
+    color: #FAFAFA;
+}
+
+.impact-section h2 {
+    font-size: 4rem;
+    margin-bottom: 40px;
+    color: #8BC34A; /* Green accent for heading */
+}
+
+.impact-stats {
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.impact-card {
+    background-color: #2A2D34;
+    border: 1px solid white;
+    padding: 40px;
+    margin-top: 30px;
+    border-radius: 15px;
+    width: 700px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.impact-card:hover {
+    transform: scale(1.1);
+}
+
+.impact-card h3 {
+    font-size: 3.5rem;
+    color: #8BC34A;
+    margin-bottom: 20px;
+}
+
+.impact-card p {
+    font-size: 1.25rem;
+    color: #FAFAFA;
+}
+
+@media (max-width: 768px) {
+    .impact-stats {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .impact-card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Our Team Section */
+.team-section {
+    background-color: #2A2D34; /* Dark background */
+    padding: 100px 0;
+    text-align: center;
+    color: #FAFAFA;
+}
+
+.team-section h2 {
+    font-size: 3.5rem;
+    color: #8BC34A;
+    margin-bottom: 60px;
+}
+.team-section h3 {
+    font-size:2rem;
+    color: #8BC34A;
+}
+.team-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px; /* Reduced gap to bring cards closer */
+    flex-wrap: wrap;
+}
+
+
+.team-member {
+    background-color: #333;
+    border-radius: 15px;
+    padding: 20px;
+    width: 450px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.team-photo {
+    width: 75%;
+    border-radius: 10%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: auto;
+}
+
+.team-position {
+    font-size: 1.3rem;
+    color: #8BC34A; /* Highlight the position in green */
+    margin-bottom: 10px;
+}
+
+.team-bio {
+    font-size: 0.5rem;
+    color: #FAFAFA;
+    margin-bottom: 20px;
+}
+
+.linkedin-icon img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.linkedin-icon img:hover {
+    transform: scale(1.2); /* Enlarge LinkedIn icon on hover */
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .team-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-member {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+#contact {
+    padding: 50px;
+    background-color: #2A2D34; /* Matches the rest of your color scheme */
+    text-align: center;
+    color: #ffffff; /* White text */
+  }
+  
+  .contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    font-size: 2.5em;
+    color: #7AC943; /* Matches your website's green color */
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+  }
+  
+  .email-button {
+    background-color: #7AC943; /* Your green color */
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .email-button:hover {
+    background-color: #69a63b; /* Darker green on hover */
+  }
+  
+  #footer {
+    padding: 60px 0;
+    background-color: #1f1f1f;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+  }
+  
+  .footer-left {
+    flex: 1;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  
+  .footer-left h3 {
+    color: #7AC943;
+    margin-bottom: 10px;
+  }
+  
+  .footer-left p {
+    margin-top: 10px;
+  }
+  
+  .footer-right {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .footer-links {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  
+  .footer-links li a {
+    color: #7AC943;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links li a:hover {
+    color: #69a63b;
+  }
+  
+  .footer-bottom {
+    margin-top: 30px;
+    border-top: 1px solid #3b3b3b;
+    padding-top: 10px;
+    font-size: 0.9em;
+    text-align: center;
+  }
+  
+  .footer-bottom p {
+    margin: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .footer-right {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  
+    .footer-links li {
+      margin: 5px 10px;
+    }
+  }
+  
