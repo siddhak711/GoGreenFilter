@@ -6,6 +6,8 @@
     <title>GoGreen Filter - Revolutionizing Emission Control</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
 </head>
 
 <body>
@@ -16,20 +18,26 @@
             <div class="navbar-container">
                 <div class="logo">
                     <a href="#hero">
-                    <img src="logo.png" alt="GoGreen Logo">
+                        <img src="logo.png" alt="GoGreen Logo">
                     </a>
                 </div>
-                <ul class="nav-links">
+                <!-- Hamburger icon -->
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links" id="nav-links">
                     <li><a href="#focus">Focus</a></li>
                     <li><a href="#product">Product</a></li>
                     <li><a href="#impact">Impact</a></li>
                     <li><a href="#team">Team</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-
             </div>
         </nav>
     </header>
+
 
     <!-- Hero Section -->
     <section id="hero"class="hero">
@@ -127,25 +135,25 @@
 
 <!-- Our Team Section -->
 <section id="team" class="section team-section">
-    <h2>Meet Our Team</h2>
+    <h2>Our Team</h2>
     <div class="team-grid">
         <!-- Team Member 1 -->
         <div class="team-member">
-            <img src="team-placeholder1.jpg" alt="Team Member 1" class="team-photo">
-            <h3>John Doe</h3>
-            <p class="team-position">CEO & Co-Founder</p>
-            <p class="team-bio">John leads GoGreen Filter with a vision for a greener future through innovative technology and sustainable practices.</p>
-            <a href="https://www.linkedin.com" target="_blank" class="linkedin-icon">
+            <img src="rohan-picture.png" alt="Team Member 1" class="team-photo">
+            <h3>Rohan Kapoor</h3>
+            <p class="team-position">Co-Founder & CEO</p>
+            <p class="team-bio">Rohan Kapoor is the visionary behind GoGreen Filter, driven by a deep passion for environmental innovation. His commitment to sustainability fuels his mission to reduce carbon emissions and improve air quality. Through GoGreen Filter, Rohan leads with a focus on making a lasting, positive impact on the environment and communities worldwide.</p>
+            <!--<a href="https://www.linkedin.com" target="_blank" class="linkedin-icon">
                 <img src="linkedin-icon.png" alt="LinkedIn">
-            </a>
+            </a> -->
         </div>
         <!-- Team Member 2 -->
         <div class="team-member">
-            <img src="team-placeholder2.jpg" alt="Team Member 2" class="team-photo">
-            <h3>Jane Smith</h3>
-            <p class="team-position">CTO & Co-Founder</p>
-            <p class="team-bio">Jane is the technological genius behind GoGreen Filter, bringing cutting-edge solutions to reduce carbon emissions.</p>
-            <a href="https://www.linkedin.com" target="_blank" class="linkedin-icon">
+            <img src="jack-picture.png" alt="Team Member 2" class="team-photo">
+            <h3>Jack Reichart</h3>
+            <p class="team-position">Co-Founder & CTO</p>
+            <p class="team-bio">Jack Reichert is a dedicated environmental advocate focused on creating large-scale change through GoGreen Filter. His passion for sustainability drives his commitment to reducing carbon emissions and making clean air accessible for all. Jack's leadership and expertise ensure GoGreen Filter's impact continues to grow, contributing to a greener future.</p>
+            <a href="https://www.linkedin.com/in/jack-reichert-024829309/" target="_blank" class="linkedin-icon">
                 <img src="linkedin-icon.png" alt="LinkedIn">
             </a>
         </div>
@@ -154,7 +162,7 @@
             <img src="siddha-picture.png" alt="Team Member 3" class="team-photo">
             <h3>Siddha Kanthi</h3>
             <p class="team-position">Chief Operating Officer</p>
-            <p class="team-bio">Siddha Kanthi is a senior at Reedy High School with a deep passion for driving drastic environmental change. Committed to creating sustainable solutions, Siddha strives to innovate and make a lasting impact on global environmental challenges.</p>
+            <p class="team-bio">Siddha Kanthi is a dedicated environmental advocate who plays a key role in driving the mission of GoGreen Filter. Passionate about sustainability and innovative solutions, Siddha is committed to reducing carbon emissions and advancing cleaner technologies. Focused on making a tangible impact, Siddha brings a professional, forward-thinking approach to the GoGreen Filter team’s efforts to create a healthier, greener world.</p>
             <a href="https://www.linkedin.com/in/siddha-kanthi/" target="_blank" class="linkedin-icon">
                 <img src="linkedin-icon.png" alt="LinkedIn">
             </a>
@@ -201,7 +209,7 @@
       </div>
       
       
-
+      
     <script>
         document.addEventListener('scroll', function() {
             const sections = document.querySelectorAll('.section');
@@ -214,6 +222,15 @@
         });
 
     </script>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+    
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+    
     
 </body>
 </html>
