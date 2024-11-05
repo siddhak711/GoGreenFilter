@@ -870,7 +870,7 @@ body {
     }
 }
 .emphasis p {
-    font-size: 2rem;
+    font-size: 1.75rem;
 }
 
 /* Impact Section Styling */
@@ -1285,3 +1285,36 @@ body {
     }
 }
 
+#sponsors {
+    text-align: center;
+    padding: 20px;
+}
+
+.sponsors-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 75px; /* Adjust spacing between logos as needed */
+}
+
+.sponsors-logos img {
+    width: 400px; /* Set a consistent width */
+    height: auto; /* Adjust height automatically to keep the logo aspect ratio */
+    max-height: 300px; /* Optional: set a max height if needed */
+}
+@media (max-width: 768px) {
+    #sponsors h2{
+        font-size: 44px;
+        margin-bottom: 60px; /* Reduce space below the title */
+        margin-top: 40px;
+    }
+    .sponsors-logos {
+        flex-direction: column; /* Stack logos vertically */
+        gap: 25px;
+    }
+    .sponsors-logos img {
+        width: 300px; /* Set a consistent width */
+        height: auto; /* Adjust height automatically to keep the logo aspect ratio */
+        max-height: 200px; /* Optional: set a max height if needed */
+    }
+}
